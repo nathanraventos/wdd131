@@ -94,6 +94,7 @@ footer {
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);  
+    padding: 0 15rem;
   }
   
   nav {
