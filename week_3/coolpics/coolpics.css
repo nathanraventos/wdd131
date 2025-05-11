@@ -1,0 +1,116 @@
+ @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, sans-serif;
+ }
+ a:link,
+ a:visited {
+    color: var(--text-light);
+ }
+body {
+    background-color: #e4e4e4;
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    margin: 0;
+ }
+ header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2rem;
+ }
+  h1 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1em;
+ }
+ nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 1rem;
+}
+ main{
+    align-items: center;
+    text-align: center;
+    background-color: #dddd;
+ }
+h2 {
+    color: var(--text-dark);
+    font-family: var(--secondary-font);
+    margin: 0;
+    padding: 1em;
+ }
+.gallery{
+    text-align: center;
+ }
+img {
+    aspect-ratio: 1 / 1;
+    max-width: 100%; 
+    object-position: center;
+    object-fit: cover;
+    box-sizing: border-box;
+    padding: .5rem;
+    align-items: center;
+    justify-items: center;
+    background-color: white;
+    box-shadow: 0 12px 24px 4px rgba(0, 0, 0, 0.5) ;
+}
+figure{
+    margin: 2rem;
+}
+footer {
+    background-color: var(--primary-color);
+    margin: 0;
+    color: var(--text-light);
+    text-align: center;
+ }
+
+ #menuToggle{
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: .5rem;
+ }
+ /* 700px breakpoint */
+@media screen and (min-width: 700px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+  }
+}
+
+/* 1000px breakpoint */
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);  
+  }
+  
+  nav {
+    display: flex; 
+    justify-content: center; 
+  }
+  
+  #menuToggle {
+    display: none; 
+  }
+
+  nav ul {
+    display:flex;
+  }
+}
+
+
+
+ 
