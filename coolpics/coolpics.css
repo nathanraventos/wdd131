@@ -9,6 +9,9 @@
  --primary-font: Arial, Helvetica,sans-serif;
  --secondary-font: Mooli, sans-serif;
 }
+.hide {
+  display: none
+}
  a:link,
  a:visited {
     color: var(--text-light);
@@ -82,6 +85,24 @@ footer {
     cursor: pointer;
     padding: .5rem;
 }
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+dialog img {
+  margin: 20vh 0 auto;
+  width: 90%;
+  max-height:100%;
+  max-width: 100%;
+  background-color: white;
+}
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+
+}
+
  /* 700px breakpoint */
 @media screen and (min-width: 700px) {
   .gallery {
