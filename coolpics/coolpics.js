@@ -1,3 +1,25 @@
+// MENU BUTTON CODE
+const menuButton = document.querySelector(".menu-button");
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("hide");
+}
+
+function handleResize() {
+  const menu = document.querySelector(".menu");
+  if (window.innerWidth > 1000) {
+    menu.classList.remove("hide");
+  } else {
+    menu.classList.add("hide");
+  }
+}
+
+menuButton.addEventListener("click", toggleMenu);
+window.addEventListener("resize", handleResize);
+handleResize();
+
+
 // Target elements
 const gallery = document.querySelector(".gallery");
 const modal = document.querySelector("dialog");
