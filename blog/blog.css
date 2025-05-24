@@ -33,7 +33,7 @@ header {
 
 header h1 {
   font-size: 3rem;
-  margin: 1px;
+  margin: 0 0 2rem 0;
 }
 
 /* NAVIGATION GRID */
@@ -62,33 +62,59 @@ nav li a {
 /* MAIN LAYOUT GRID */
 
 .content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 300px; 
+  gap: 3rem;
+}
+
+
+.book-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start; 
+}
+
+.book-info {
+    width: 200px;
+    border: 2px solid #EFC69B;
+    padding: rem;
+    background-color: #fff8f0;
+    font-size: 0.9rem;
+    color: #473144;
+}
+
+.book-article img {
+  max-width: 100%;
+  height: auto;
+}
+.book-article h3{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #AF1B3F;
 }
 
 /* ARTICLE GRID */
 
-article {
+.book-article {
   display: grid;
-  grid-template-columns: 1fr; /* single column */
-  gap: 1rem; /* spacing between title, image, and summary */
+  grid-template-columns: 1fr; 
+  gap: 1rem; 
   padding-bottom: 2rem;
   border-bottom: 2px solid #EFC69B;
   max-width: 600px;
-  margin: 0 auto; /* center the article horizontally */
 }
 
 article img {
-  max-width: 100%; /* makes image responsive */
+  max-width: 100%; 
   height: auto;
 }
 
 article h3 {
-  margin: 0; /* remove default margin to tighten spacing */
+  margin: 0; 
 }
 
 
@@ -101,40 +127,7 @@ article h3 {
   margin-top: 0;
 }
 
-/* FILTER BOX */
 
-/* Assuming you'll replace that <p> with an <aside class="filters"> */
-.filters {
-  border: 2px solid #EFC69B;
-  padding: 1rem;
-  max-width: 300px;
-  background-color: #ffffff;
-  font-size: 0.9rem;
-  color: #473144;
-  margin-bottom: 2rem;
-}
-
-.filters h2 {
-  font-family: 'Lora', Impact, serif;
-  color: #AF1B3F;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-/* Style labels and selects inside filters */
-.filters label {
-  display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.filters select {
-  width: 100%;
-  padding: 0.3rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
 
 /* Remove top margin from the h3 in main */
 main article h3:first-of-type {
