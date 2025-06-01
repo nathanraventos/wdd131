@@ -30,6 +30,11 @@ header {
   padding: 2rem 0;
   
 }
+.header-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 header h1 {
   font-size: 3rem;
@@ -70,7 +75,6 @@ nav li a {
   gap: 3rem;
 }
 
-
 .book-row {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -78,21 +82,34 @@ nav li a {
     align-items: start; 
 }
 
-.book-info {
-    width: 200px;
-    border: 2px solid #EFC69B;
-    padding: 1rem;
-    background-color: #fff8f0;
-    font-size: 0.9rem;
-    color: #473144;
+.details {
+  width: 200px;
+  padding: .75rem;
+  font-size: 1rem;
+  color: #473144;
+  padding-right: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.book-article img {
-  max-width: 100%;
-  height: auto;
+.details .date {
+  font-size: 1.25rem;  /* bigger date */
+  margin-bottom: 0.3rem;
 }
-.book-article h3{
-  font-size: 2rem;
+
+.details .ages,
+.details .genre {
+  font-size: 1rem; /* regular size */
+  margin-bottom: 0.3rem;
+}
+
+.details .stars {
+  font-size: 0.85rem; /* smaller stars */
+  color: #b8860b; /* optional golden star color */
+  margin-bottom: 0;
+}
+
+.book-article h2{
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: #AF1B3F;
 }
@@ -103,9 +120,10 @@ nav li a {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 1rem; 
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #EFC69B;
+  padding-bottom: 1.5rem;
+  border-left: 2px solid #EFC69B;
   max-width: 600px;
+  padding-left: 1.5rem;
 }
 
 article img {
@@ -113,6 +131,12 @@ article img {
   height: auto;
 }
 
+.book-article img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
 article h3 {
   margin: 0; 
 }
@@ -127,10 +151,14 @@ article h3 {
   margin-top: 0;
 }
 
-
+.filters {
+  border: 2px solid #EFC69B; /* assuming your nav bar yellow is #ffcc00 — adjust if needed */
+  padding: 1rem;
+  border-radius: 8px;
+}
 
 /* Remove top margin from the h3 in main */
-main article h3:first-of-type {
+main article h2:first-of-type {
   margin-top: 25px;
 }
 
