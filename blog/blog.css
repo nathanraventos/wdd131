@@ -84,10 +84,9 @@ nav li a {
 
 .details {
   width: 200px;
-  padding: .75rem;
+  padding: .75rem .25rem .75rem .75rem;
   font-size: 1rem;
   color: #473144;
-  padding-right: 1rem;
   margin-bottom: 0.3rem;
 }
 
@@ -103,7 +102,7 @@ nav li a {
 }
 
 .details .stars {
-  font-size: 0.85rem; /* smaller stars */
+  font-size: 1rem; /* smaller stars */
   color: #b8860b; /* optional golden star color */
   margin-bottom: 0;
 }
