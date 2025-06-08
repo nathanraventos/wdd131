@@ -11,67 +11,45 @@
 </head>
 <body>
     <div id="form-container">
-        <div class="card">
-            <div id="card-front">
-                <form action="#" method="post">
-                    <div id="image-container">
-                        <span id="amount">Paying: <strong>$99</strong></span>
-                        <img src="" class="card-image" height="55px">
-                    </div>
 
-                    <label for="card-number">Card Number</label>
-                    <input type="text" id="card-number" placeholder="1234 5678 9101 1121" 
-                        required pattern="\d{16}" maxlength="16">
-
-                    <label for="card-holder">Card Holder</label>
-                    <input type="text" id="card-holder" placeholder="John Doe" required>
-
-                    <label>Expiration</label>
-                    <input type="text" id="card-month" placeholder="MM" 
-                        required pattern="\d{2}" maxlength="2">
-                    <input type="text" id="card-year" placeholder="YY" 
-                        required pattern="\d{2}" maxlength="2">
-
-                    <button type="submit">Submit</button>
-                </form>
+        <!-- Card Front -->
+        <div id="card-front">
+            <div id="total-container">Total: $199.99</div>
+            <div id="card-number-container">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" maxlength="19" placeholder="1234 5678 9012 3456" />
             </div>
-            <div id="card-back">
-                <div id="card-stripe"></div>
 
-                <label for="card-cvc">CVC</label>
-                    <input type="text" id="card-cvc" placeholder="123" required pattern="\d{3,4}" maxlength="4">
-                    <p>Last 3 or 4 digits</p>
+            <div id="cardholder-container">
+                <label for="card-holder">Cardholder</label>
+                <input type="text" id="card-holder" placeholder="FULL NAME" />
+            </div>
+
+            <div id="exp-container">
+                <label for="card-month">Expiration</label>
+                <input type="text" id="card-month" maxlength="2" placeholder="MM" />
+                <input type="text" id="card-year" maxlength="2" placeholder="YY" />
+            </div>
+
+            <div id="card-image">
+                <!-- Example icon; replace with your own or an <img> -->
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
             </div>
         </div>
+
+        <!-- Card Back -->
+        <div id="card-back">
+            <div id="card-stripe"></div>
+            <div id="cvc-container">
+                <label for="card-cvc">CVC</label>
+                <input type="text" id="card-cvc" maxlength="4" placeholder="123" />
+                <p>3 or 4 digits</p>
+            </div>
+        </div>
+        <button id="card-btn">Submit</button>
+
+        <div id="form-errors" class="hidden"></div>
+        <div id="card-success" class="hidden"></div>
     </div>
-    <script>
-        const cardNumberInput = document.getElementById('card-number');
-        const cardImage = document.querySelector('.card-image');
-
-        cardNumberInput.addEventListener('input', () => {
-            const value = cardNumberInput.value;
-
-            if (value.startsWith('4')) {
-            cardImage.src = 'visa.png';
-            } else if (value.startsWith('5')) {
-            cardImage.src = 'mastercard.png';
-            } else {
-            cardImage.src = 'default-card.png';
-            }
-        });
-    </script>
-    <script>
-        const cvcInput = document.getElementById('card-cvc');
-        const formContainer = document.getElementById('form-container');
-
-        cvcInput.addEventListener('focus', () => {
-            formContainer.classList.add('flipped');
-        });
-
-        cvcInput.addEventListener('blur', () => {
-            formContainer.classList.remove('flipped');
-        });
-    </script>
-
 </body>
 </html>
