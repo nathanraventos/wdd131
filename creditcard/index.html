@@ -31,8 +31,8 @@
         <div class="expiration">
           <label for="exp-month">EXPIRATION</label>
           <div class="exp-inputs">
-                <input type="text" id="exp-month" placeholder="MM" required>
-                <input type="text" id="exp-year" placeholder="YY" required>
+                <input type="text" id="exp-month" placeholder="MM" required pattern="^(0[1-9]|1[0-2])$" maxlength="2" minlength="2" inputmode="numeric">
+                <input type="text" id="exp-year" placeholder="YY" required pattern="^\d{2}$" maxlength="2" minlength="2" inputmode="numeric">
           </div>
         </div>
       </section>
