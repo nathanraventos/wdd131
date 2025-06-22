@@ -1,0 +1,213 @@
+/* Import accessible header font */
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+:root {
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Comic Neue', cursive;
+  --accent-blue: #1B98E0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Patrick Hand', Arial, Helvetica, sans-serif;
+}
+
+/* Reset / Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Consistent page padding */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  background-color: #fff;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header — centered layout */
+/* Header — side by side layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+header h1 {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  margin-left: 0.75rem;
+  position: relative;
+  top: 4px; /* move title down a few pixels */
+}
+
+/* Search Bar */
+form {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+form input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+form input::placeholder{
+    color: #888;
+}
+
+form button {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  cursor: pointer;
+}
+
+form button img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Divider under search */
+.divider {
+    border-bottom: 3px solid #ccc;
+    margin: 1rem 1rem;
+}
+
+/* Recipe Section */
+/* Recipe Section — more padding around the section itself */
+#recipes {
+  padding: 1.5rem 3rem;
+}
+
+/* Recipe Card Layout — more space around content */
+.recipe-card {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+/* Image with extra padding */
+.recipe-card img {
+  flex: 0 0 150px;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+/* Recipe Details with extra padding */
+.recipe-details {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+/* Tag sits above title now */
+.recipe-details .tag {
+  font-size: 1rem;
+  background-color: #eee;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+/* Title in link-blue */
+.recipe-details h2 {
+  font-family: var(--secondary-font);
+  font-size: 1.75rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.4rem;
+}
+
+/* Ratings */
+.rating {
+  font-size: 1.2rem;
+  color: gold;
+  margin-bottom: 0.5rem;
+}
+
+/* Description */
+.description {
+  font-size: 0.95rem;
+}
+
+/* Footer Layout */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.6em;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social a img {
+  width: 65px;
+  height: 65px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    flex-direction: column; /* stack image and details vertically */
+  }
+
+  .recipe-card img {
+    width: 100%; /* full width image */
+    padding: 0.5rem 0; /* some vertical padding */
+  }
+
+  .recipe-details {
+    padding: 0.5rem 1rem; /* adjust padding for mobile */
+  }
+
+  /* Hide the description on small screens */
+  .description {
+    display: none;
+  }
+}
+
+
+
