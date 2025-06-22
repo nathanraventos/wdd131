@@ -7,7 +7,7 @@ recipes.forEach(recipe => {
   card.classList.add('recipe-card');
 
   card.innerHTML = `
-    <img src="${recipe.image}" alt="${recipe.name}">
+    <img src="${recipe.image}" alt="${recipe.name}" width="400" height="300">
     <div class="recipe-details">
       <div class="tag">${recipe.tags[0]}</div>
       <h2>${recipe.name}</h2>
