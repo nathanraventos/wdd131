@@ -301,7 +301,7 @@ main section {
   grid-column: 3/7;
   grid-row: 1/6;
   margin: 15px;
-  margin-bottom: 7em;
+  margin-bottom: 2em;
 }
 
 .workout_sub_pic {
