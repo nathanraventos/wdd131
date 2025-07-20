@@ -117,7 +117,7 @@ h2 {
   color: var(--headline-color-on-white);
 }
 
-h4 {
+h3 {
   color: var(--headline-color-on-color);
   font-family: var(--heading-font);
 }
@@ -163,7 +163,7 @@ main section {
 }
 
 #hero-msg h1,
-#hero-msg h4 {
+#hero-msg h3 {
   color: var(--primary-color);
 }
 
@@ -453,7 +453,7 @@ margin-bottom: 15px;
     margin-top: 0;
   }
 
-  #hero-msg h4 {
+  #hero-msg h3 {
     display: none;
   }
 
